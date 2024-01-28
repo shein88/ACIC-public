@@ -1,0 +1,61 @@
+{% load static %}
+
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static 'images/aciclogo.png' %}" alt="" >
+    </a>
+  </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="bi bi-house"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
+       
+        <ul class="navbar-nav ms-5">
+          <li class="nav-item me-3">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="{% url 'vision' %}">Vision</a></li>
+              <li><a class="dropdown-item" href="{% url 'objectives' %}">Objectives</a></li>
+              <li><a class="dropdown-item" href="{% url 'boardofdirectors' %}">Board of Directors</a></li>
+              <li><a class="dropdown-item" href="{% url 'team' %}">The Team</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Facilities
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="{% url 'makerslab' %}">Makers Lab </a></li>
+              <li><a class="dropdown-item" href="{% url 'sectorspecificlab' %}">Sector Specific Lab</a></li>
+              <li><a class="dropdown-item" href="{% url 'communityinnovativespace' %}">Co-working and community Innovative space</a></li>
+            </ul>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="{% url 'events' %}">Events</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="{% url 'mentors' %}">Mentors</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="{% url 'startups' %}">StartUps</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="{% url 'collabrations' %}">Collabrations</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>

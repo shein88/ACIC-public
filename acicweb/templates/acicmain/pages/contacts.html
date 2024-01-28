@@ -1,0 +1,28 @@
+{% extends 'acicmain/layouts/main.html' %}
+{% block title %} Contacts {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="my-2" style="text-align: center;">Contact</h1>
+            
+            <div class="card-header my-3 mx-3">
+                <div class="card my-3 mx-3" >
+                    <div class="card-body">
+                        <p class="my-5">{% for point in bullet_points %}
+                            {% if forloop.counter0 == 0 %}
+                                <h5 class="" style="text-align: center;">{{ point }}</h5>
+                            {% else %}
+                                <h6 style="text-align: center;">{{ point }}</h6>
+                            {% endif %}
+                        {% endfor %}
+                        </p>
+                    </div>
+                  </div>
+              </div>
+              
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

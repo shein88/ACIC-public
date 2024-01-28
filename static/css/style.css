@@ -1,0 +1,156 @@
+.carousel-item img {
+    height: 80vh;
+    max-height: 100%;
+}
+
+/* Custom CSS for the box style */
+.box-border {
+  border: 1px solid #ec5f5f;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  height: 300px;
+  
+  
+}
+
+
+  /* Custom CSS for the box style */
+.box-border2 {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    height: 100px;
+  }
+ 
+  .more {
+    text-align: center;
+    position: relative;
+    /* Add any other desired styles for the .more element */
+  }
+
+  .iconimage {
+    text-align: center;
+    position: relative;
+    /* Add any other desired styles for the .image element */
+  }
+
+  .more a {
+    text-decoration: none;
+    color: green; /* Remove underline from links inside .more */
+  }
+
+ /* Apply green background on even-child iconimage i and odd-child .more a when hovered */
+.iconimage:nth-child(even) i:hover,
+.more a:nth-child(odd):hover {
+  background-color: black;
+  color: white; /* Add text color for the icon when hovered */
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #f8f9fa; /* Add your desired background color */
+  border-color: #dee2e6; /* Add your desired border color */
+}
+
+.tab-content div p {
+  background-color: lightgrey;
+  color: black;
+  line-height: 2; /* Increase the line-height to adjust the height of the <p> elements */
+  transition: font-weight 0.2s; /* Add a smooth transition effect */
+}
+
+.tab-content div p:hover {
+  font-weight: bold;
+}
+
+.startup-box {
+  border: 2px solid transparent; /* Set an initial transparent border */
+  background-image: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Define the gradient background */
+  transition: border 0.3s, background-color 0.3s; /* Add transition for border and background changes */
+  padding: 3px; /* Add some padding for spacing */
+}
+
+.startup-box:hover {
+  border: 2px solid orangered; /* Change the border color on hover */
+  background-image: linear-gradient(to bottom, #e0e0e0, #f0f0f0); /* Adjust the gradient on hover */
+}
+
+.startup-box .icon i {
+  transition: color 0.3s; /* Add a transition for icon color change */
+}
+
+.startup-box:hover .icon i {
+  color: orangered; /* Change icon color to red on hover */
+}
+
+.startup-box .icon .info p.title {
+  transition: font-weight 0.3s, color 0.3s; /* Add transitions for font-weight and color changes */
+}
+
+.startup-box:hover .icon .info p.title {
+  font-weight: bold; /* Make the paragraph bold on hover */
+  color: green;
+  
+}
+
+.eventbox {
+  border: 2px solid transparent; /* Set an initial transparent border */
+  background-image: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Define the gradient background */
+  transition: border 0.3s, background-color 0.3s; /* Add transition for border and background changes */
+  padding: 3px; /* Add some padding for spacing */
+}
+
+.eventbox:hover {
+  border: 2px solid black; /* Change the border color on hover */
+  background-image: linear-gradient(to bottom, #e0e0e0, #f0f0f0);
+}
+
+.black-link {
+  color: black;
+}
+
+
+.stats-div {
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: white;
+  padding: 15px; 
+  height: 200px;
+ 
+}
+
+.stats-div i {
+  font-size: 48px;
+  align-items: center;
+}
+
+.stats-div a {
+  color: black;
+  text-decoration: none;
+  align-content: center;
+  
+}
+
+.stats-div p {
+  font-size: 18px;
+  font-weight: bolder;
+  align-items: center;
+  
+ 
+}
+.stats-div a:hover {
+  background-color: black;
+  color: white;
+}
+
+.black-link:hover {
+  background-color: black; 
+  color: white; 
+}
+
+    
+       
+
+   
+

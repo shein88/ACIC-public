@@ -1,0 +1,55 @@
+{% extends 'acicmain/layouts/main.html' %}
+{% load static %}
+{% load custom_filters  %} 
+{% block title %} Event Details {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="my-3" style="text-align: center;">{{ event_name.name }}</h1>
+
+            <div class="row my-4">
+                <div class="col-3"></div>
+                
+                {% for evdetails in event_details %}
+                {% if evdetails.eventname == event_name %}
+                <div class="card-header mb-2 my-2 text-center">
+                    {% if evdetails.image1 %}
+                    <img src="{{ evdetails.image1.url }}" class="card-img-top my-3" alt="" style="width: 75%; height: 500px; object-fit: cover;">
+                {% endif %}
+                {% if evdetails.image2 %}
+                    <img src="{{ evdetails.image2.url }}" class="card-img-top my-3" alt="" style="width: 75%; height: 500px; object-fit: cover;">
+                {% endif %}
+                {% if evdetails.image3 %}
+                    <img src="{{ evdetails.image3.url }}" class="card-img-top my-3" alt="" style="width: 75%; height: 500px; object-fit: cover;">
+                {% endif %}
+                {% if evdetails.image4 %}
+                    <img src="{{ evdetails.image4.url }}" class="card-img-top my-3" alt="" style="width: 75%; height: 500px; object-fit: cover;">
+                {% endif %}
+                {% if evdetails.image5 %}
+                    <img src="{{ evdetails.image5.url }}" class="card-img-top my-3" alt="" style="width: 75%; height: 500px; object-fit: cover;">
+                {% endif %}
+                {% if evdetails.image6 %}
+                    <img src="{{ evdetails.image6.url }}" class="card-img-top my-3" alt="" style="width: 75%; height: 500px; object-fit: cover;">
+                {% endif %}
+                {% if evdetails.image7 %}
+                    <img src="{{ evdetails.image7.url }}" class="card-img-top my-3" alt="" style="width: 75%; height: 500px; object-fit: cover;">
+                {% endif %}
+                {% if evdetails.image8 %}
+                    <img src="{{ evdetails.image8.url }}" class="card-img-top my-3" alt="" style="width: 75%; height: 500px; object-fit: cover;">
+                {% endif %}
+                    <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">{{ evdetails.venue }}</h5>
+                    <p class="card-text" style="text-align: center;">{{ evdetails.date }} </p>
+                    
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                
+                <div class="col-3"></div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
