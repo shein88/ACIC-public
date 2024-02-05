@@ -1,0 +1,46 @@
+{% extends 'acicmain/layouts/main.html' %}
+{% block title %} Mentors {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="my-4" style="text-align: center;">Mentors</h1>
+            <div class="row">
+                <h1 class="my-4">International Mentors</h1>
+                {% for inter in inter_mentor %}
+                <div class="col-md-4 my-4">
+                    <div class="card-header mx-3">
+                        <div class="mentor">
+                            <img src="{{ inter.image.url }}" class="card-img-top my-2" alt="" style="width: 100%; height: 350px; object-fit: contain;">
+                            <div class="card-body" style="width: 100%; height: 200px;">
+                                <h6 class="card-title" style="text-align: center;"><strong>{{ inter.name }}</strong></h6>
+                                <p class="card-text" ><small>{{ inter.designation }}</small></p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% endfor %}  
+            </div>
+            <div class="row">
+                <h1 class="my-2">Mentors</h1>
+                {% for other in mentor %}
+                <div class="col-sm-6 col-md-3 my-3">
+                    <div class="card-header mx-2">
+                        <img src="{{ other.image.url }}" class="card-img-top my-1" alt="" style="width: 100%; height: 250px; object-fit: contain;">
+                        <div class="card-body" style="width: 100%; height: 200px;">
+                            <h6 class="card-title" style="text-align: center;"><strong>{{ other.name }}</strong></h6>
+                            <p class="card-text" ><small>{{ other.designation }}</small></p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                {% endfor %}  
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

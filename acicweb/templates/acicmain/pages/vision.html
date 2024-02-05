@@ -1,0 +1,23 @@
+{% extends 'acicmain/layouts/main.html' %}
+{% block title %} Vision {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="my-3" style="text-align: center;">Vision</h1>
+            <div class="card-header my-3 mx-3 " >
+                <div class="card my-3 mx-3" >
+                    <div class="card-body">
+                        <ul>
+                            {% for point in bullet_points %}
+                            <li style="text-align: justify; font-weight: bold;">{{ point }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,60 @@
+{% extends 'acicmain/layouts/main.html' %}
+{% block title %} Vision {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="my-3" style="text-align: center;">this is{{ totallabcount }}</h1>
+           
+            <!-- First Row -->
+            <div class="col-md-12 col-sm-12 col-xs-12 my-4">
+                <fieldset id="major-feild-set" style="margin-top:15px;">
+                    <form method="post" action="{% url 'faq' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-4">
+                                
+                            </div>
+                            <label for="">Search by Date:</label>
+                            <div class="col-md-4">
+                                
+                                <input class="form-control" type="date" name="search_date" value="{{ search_date }}">
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    
+            <!-- ./ table -->
+            <div class="row my-4">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <table id="role-details" class="table table-striped table-bordered" cellspacing="0">
+                    <thead>
+                      <tr class="header-row" style="align-items: center;">
+                            <th>SlNo</th>
+                            <th>government</th>
+                            <th>corporate</th>
+                            <th>Academic</th>
+                            
+                      </tr>
+                      <tr class="header-row" style="align-items: center;">
+                        <td>{% for col in collaborations %} {{ col.id }} {% endfor %}</td>
+                        <td>{% for col in collaborations %} {{ col.government }} {% endfor %}</td>
+                        <td>{% for col in collaborations %} {{ col.corporate }} {% endfor %}</td>
+                        <td>{% for col in collaborations %} {{ col.academic }} {% endfor %}</td>
+                       </tr>
+                    </thead>
+                  <tbody class="table-coloum-style">
+                      
+                  </tbody>
+                </table>
+                 
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

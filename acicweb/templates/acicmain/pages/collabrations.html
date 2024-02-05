@@ -1,0 +1,72 @@
+{% extends 'acicmain/layouts/main.html' %}
+{% load static %}
+{% block title %} Collabration {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="my-4" style="text-align: center;">Collabrations</h1>
+            
+            <div class="row">
+                <div class="card text-center my-4">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs nav-fill card-header-tabs">
+                            <li class="nav-item">
+                                <a style="font-weight: bolder;" class="nav-link{% if active_tab == 'government' %} active{% endif %}" href="{% url 'collabrations_tab' tab='government' %}">
+                                    <strong> Government Collaboration</strong>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="font-weight: bolder;" class="nav-link{% if active_tab == 'corporate' %} active{% endif %}" href="{% url 'collabrations_tab' tab='corporate' %}">
+                                    <strong>Corporate partners / Collaborations</strong>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="font-weight: bolder;" class="nav-link{% if active_tab == 'academic' %} active{% endif %}" href="{% url 'collabrations_tab' tab='academic' %}">
+                                    <strong>Academic partnerships</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div id="government" class="tab-pane fade{% if active_tab == 'government' %} show active{% endif %}">
+                                {% if active_tab == 'government' %}
+                                    
+                                    {% for paragraph in collabrations_tab %}
+                                    <a href="https://www.google.com/search?q={{ paragraph }}" class="text-decoration-none" target="_blank">
+                                        <p><strong>{{ paragraph }}</strong></p>
+                                    </a>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div id="corporate" class="tab-pane fade{% if active_tab == 'corporate' %} show active{% endif %}">
+                                {% if active_tab == 'corporate' %}
+                                    
+                                    {% for paragraph in collabrations_tab %}
+                                    <a href="https://www.google.com/search?q={{ paragraph }}" class="text-decoration-none" target="_blank">
+                                        <p><strong>{{ paragraph }}</strong></p>
+                                    </a>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div id="academic" class="tab-pane fade{% if active_tab == 'academic' %} show active{% endif %}">
+                                {% if active_tab == 'academic' %}
+                                    
+                                    {% for paragraph in collabrations_tab %}
+                                    <a href="https://www.google.com/search?q={{ paragraph }}" class="text-decoration-none" target="_blank">
+                                        <p><strong>{{ paragraph }}</strong></p>
+                                    </a>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

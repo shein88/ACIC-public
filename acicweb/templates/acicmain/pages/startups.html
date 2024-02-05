@@ -1,0 +1,33 @@
+{% extends 'acicmain/layouts/main.html' %}
+{% block title %} StartUps {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="my-3" style="text-align: center;">Startups</h1>
+            <div class="row">
+                
+            
+            {% for name in startupname %}
+            <div class="col-sm-6 col-md-4 my-3 ">
+                
+                <div class="startup-box">							
+                    <div class="icon">
+                        <div class="media services-wrap wow fadeInDown box-border2">
+                            <div class="info">
+                                <p class="title my-4" style="text-align: center; color: green; font-size: 18px;">
+                                    <i class="fas fa-industry" style="font-size: 24px;"></i>
+                                    <a class="text-decoration-none" href="" style="color: black;" ><strong>{{ name.name }}</strong></a>
+                                </p>
+                            </div>
+                       </div>
+                 </div>
+               </div>
+               
+            </div>
+            {% endfor %} 
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

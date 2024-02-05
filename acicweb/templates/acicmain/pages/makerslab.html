@@ -1,0 +1,29 @@
+{% extends 'acicmain/layouts/main.html' %}
+{% block title %} Makers Lab {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="my-4" style="text-align: center;">Makers Lab</h1>
+            <div class="row">
+                
+                {% for lab in labname %}
+                <div class="col-md-4 my-4">
+                    <div class="card-header mx-3">
+                        <div class="mentor">
+                            <img src="{{ lab.image.url }}" class="card-img-top my-2" alt="" style="width: 100%; height: 350px; object-fit: contain;">
+                            <div class="card-body" style="width: 100%; height: 100px;">
+                                <h6 class="card-title" style="text-align: center;">{{ lab.name }}</h6>
+                                <p class="card-text" style="text-align: center;"><small>{{ lab.description }}</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% endfor %}  
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock content %}

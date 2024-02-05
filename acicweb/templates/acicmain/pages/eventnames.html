@@ -1,0 +1,35 @@
+{% extends 'acicmain/layouts/main.html' %}
+{% block title %} Event Names {% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            
+            <h1 class="my-4" style="text-align: center;">{{ prev_event }}</h1>
+            
+            <div class="row">
+                {% for event in eventnames %}
+            <div class="col-xs-12 col-sm-6 col-lg-4 my-4">
+                <div class="box">							
+                    <div class="icon">
+                        <div class="iconimage"><i class="fas fa-caret-square-right" style="font-size: 36px;"></i></div>
+                        <div class="media services-wrap wow fadeInDown eventbox">
+                        <div class="info">
+                            <h6 class="title my-2" style="text-align: center; color: green;">{{ event.name }}</h6>
+                            <div class="more" style="text-align: center;">
+                                <a href="{% url 'eventdetails' prev_event event.name %}" title="Title Link" >
+                                    Click here <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </div>
+            {% endfor %}	
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
